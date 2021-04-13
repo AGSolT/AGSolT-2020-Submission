@@ -115,9 +115,11 @@ def main():
                                              relevant_targets)
                     rapports = rapports + [rapport]
                     logging.info("Writing Rapport to {}".format(
-                        Rapports_folder + "/" + folder + "_{}".format(i + 1)
+                        Rapports_folder + "/" +
+                        tSuite.smartContract.contractName + "_{}".format(i + 1)
                         + ".txt"))
-                    with open(os.path.abspath(Rapports_folder + "/" + folder
+                    with open(os.path.abspath(Rapports_folder + "/" +
+                                              tSuite.smartContract.contractName
                                               + "_{}".format(i + 1) + ".txt"),
                               'w') as f:
                         f.write(rapport)
